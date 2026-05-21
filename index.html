@@ -3,35 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Liquid Manufacturing Lab</title>
+    <title>Cyber E-Juice | OEM & Private Label E-Liquid Manufacturing Lab</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #050505; /* Black background base */
+            background-color: #050505; 
             color: #ffffff;
             font-family: 'Rajdhani', sans-serif;
-            cursor: crosshair; /* Techy cursor */
+            cursor: crosshair; 
         }
         .tech-gradient {
-            /* Gradient for CTA buttons (Cyan to Blue) */
             background: linear-gradient(90deg, #00F2FF 0%, #006AFF 100%);
         }
         .glass-card {
-            /* Glassmorphism card style (Semi-transparent with blur) */
             background: rgba(255, 255, 255, 0.01);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
         .product-hover-glow {
-            /* Cyan glow effect for hovered product cards */
             transition: all 0.4s ease;
         }
         .product-hover-glow:hover {
             box-shadow: 0 0 40px rgba(0, 242, 255, 0.2);
             border-color: rgba(0, 242, 255, 0.3);
         }
-        /* Style for standard scrollbars (Webkit-based browsers) */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -45,7 +41,6 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #00F2FF;
         }
-        /* Mobile menu overlay */
         #mobile-menu {
             display: none;
             background: rgba(5, 5, 5, 0.95);
@@ -53,188 +48,211 @@
         }
     </style>
 </head>
-<body>
+<body class="relative min-h-screen overflow-x-hidden">
 
     <nav class="p-5 md:p-6 flex justify-between items-center border-b border-white/5 fixed top-0 left-0 w-full z-50 glass-card">
         <div class="text-xl md:text-2xl font-bold tracking-tighter text-cyan-400">Next‑Generation E‑Juice Factory</div>
-        
         <div class="hidden md:flex space-x-12 text-sm font-semibold tracking-widest text-neutral-400">
             <a href="#lab" class="hover:text-cyan-400">LAB_SYSTEM</a>
             <a href="#products" class="hover:text-cyan-400">PRODUCT_MATRIX</a>
             <a href="#certifications" class="hover:text-cyan-400">CERTIFICATIONS</a>
-            <a href="#contact" class="hover:text-cyan-400">ACCESS_REQUEST</a>
+            <a href="#faq" class="hover:text-cyan-400">FAQ_SYSTEM</a>
         </div>
-        
         <button id="menu-btn" class="md:hidden text-white hover:text-cyan-400">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" x2="20" y1="18"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
         </button>
     </nav>
 
     <div id="mobile-menu" class="fixed inset-0 z-40 flex flex-col items-center justify-center space-y-10 text-xl tracking-widest text-neutral-400 pt-20">
         <a href="#lab" class="hover:text-cyan-400" onclick="toggleMenu()">LAB_SYSTEM</a>
         <a href="#products" class="hover:text-cyan-400" onclick="toggleMenu()">PRODUCT_MATRIX</a>
-        <a href="#contact" class="hover:text-cyan-400" onclick="toggleMenu()">ACCESS_REQUEST</a>
+        <a href="#certifications" class="hover:text-cyan-400" onclick="toggleMenu()">CERTIFICATIONS</a>
+        <a href="#faq" class="hover:text-cyan-400" onclick="toggleMenu()">FAQ_SYSTEM</a>
     </div>
 
     <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
         <div class="absolute inset-0 opacity-20">
             <div class="w-full h-full" style="background-image: radial-gradient(#22D3EE 1px, transparent 1px); background-size: 40px 40px;"></div>
         </div>
-        
         <div class="relative z-10 text-center max-w-4xl px-4">
             <h1 class="text-6xl md:text-9xl font-bold italic tracking-tighter mb-6 leading-none">CYBER _E-JUICE</h1>
             <p class="text-cyan-400 tracking-[0.6em] text-sm md:text-2xl font-semibold mb-6">ADVANCED E-LIQUID LAB. 2026</p>
-            <p class="text-neutral-500 text-base md:text-lg mb-12 max-w-2xl mx-auto">Explore the digital flavor matrix. We engineer high-purity E-liquids for global markets, specializing in OEM/Private Label solutions and custom flavor development for Western & Middle Eastern clients.</p>
+            <p class="text-neutral-400 text-base md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">Explore the digital flavor matrix. We engineer high-purity E-liquids for global markets, specializing in OEM/Private Label solutions and custom flavor development for Western & Middle Eastern clients.</p>
             <div class="flex space-x-4 justify-center">
-                <a href="#products" class="px-12 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-500 uppercase tracking-widest text-xs font-bold">
-                    [ Enter Product List]
-                </a>
+                <a href="#products" class="px-12 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-500 uppercase tracking-widest text-xs font-bold">[ Enter Product List]</a>
             </div>
         </div>
     </section>
 
     <section id="lab" class="py-32 px-6 max-w-7xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-bold mb-20 flex items-center gap-6">
-            <span class="w-16 h-1 tech-gradient rounded-full"></span>
-            THE_SYSTEM_ARCHITECTS
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-    <div class="glass-card p-6 rounded-3xl border border-white/5 bg-white/[0.02]">
-        <div class="text-cyan-400 font-bold text-xl mb-2">100,000+</div>
-        <div class="text-xs text-neutral-400 font-semibold tracking-wider mb-3">[ DAILY_CAPACITY ]</div>
-        <p class="text-xs text-neutral-400 leading-relaxed">
-            Daily production output exceeding 100,000 bottles, ensuring rapid turnaround times for high-volume international orders.
-        </p>
-    </div>
-
-    <div class="glass-card p-6 rounded-3xl border border-white/5 bg-white/[0.02]">
-        <div class="text-cyan-400 font-bold text-xl mb-2">CLASS 10,000</div>
-        <div class="text-xs text-neutral-400 font-semibold tracking-wider mb-3">[ CLEANROOM_STANDARD ]</div>
-        <p class="text-xs text-neutral-400 leading-relaxed">
-            Fully certified pharmaceutical-grade cleanroom environment to guarantee absolute sterility and purity during blending.
-        </p>
-    </div>
-
-    <div class="glass-card p-6 rounded-3xl border border-white/5 bg-white/[0.02]">
-        <div class="text-cyan-400 font-bold text-xl mb-2">GC-MS TECH</div>
-        <div class="text-xs text-neutral-400 font-semibold tracking-wider mb-3">[ LABORATORY_TESTING ]</div>
-        <p class="text-xs text-neutral-400 leading-relaxed">
-            Rigorous molecular-level purity and composition analysis on every single batch via Gas Chromatography-Mass Spectrometry.
-        </p>
-    </div>
-</div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8 text-neutral-400 text-lg leading-relaxed">
-                <p>Next‑Generation E‑Juice Factory operates a state-of-the-art facility dedicated to the molecular precision of flavor synthesis. Our lab is designed for compliance with European and Middle Eastern regulatory frameworks, ensuring consistent purity and safety across all manufacturing batches.</p>
-                
-                <p>We provide a comprehensive E-liquid manufacturing solution: from the initial concept and custom flavor profiling to full-scale OEM production and private label branding. We leverage advanced laboratory equipment and ISO-compliant processes to deliver competitive products in rapidly evolving markets.</p>
-                
-               <div class="flex flex-wrap gap-4 text-xs tracking-wider font-bold">
-    <span class="px-5 py-2.5 border border-white/10 bg-white/5 text-neutral-400 rounded-full cursor-pointer transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400/50 hover:bg-cyan-950/30 hover:scale-105 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)]">
-        [ OEM_SUPPORT ]
-    </span>
-    
-    <span class="px-5 py-2.5 border border-white/10 bg-white/5 text-neutral-400 rounded-full cursor-pointer transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400/50 hover:bg-cyan-950/30 hover:scale-105 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)]">
-        [ PRIVATE_LABEL ]
-    </span>
-    
-    <span class="px-5 py-2.5 border border-white/10 bg-white/5 text-neutral-400 rounded-full cursor-pointer transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400/50 hover:bg-cyan-950/30 hover:scale-105 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)]">
-        [ CUSTOM_DEVELOPMENT ]
-    </span>
-</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-20 flex items-center gap-6"><span class="w-16 h-1 tech-gradient rounded-full"></span>THE_SYSTEM_ARCHITECTS</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 mb-16">
+            <div class="glass-card p-8 rounded-3xl border border-white/5 bg-white/[0.02]">
+                <div class="text-cyan-400 font-bold text-4xl mb-3">100,000+</div>
+                <div class="text-xs text-neutral-400 font-bold tracking-[0.2em] mb-4">[ DAILY_CAPACITY ]</div>
+                <p class="text-sm md:text-base text-neutral-300 leading-relaxed">Daily production output exceeding 100,000 bottles, ensuring rapid turnaround times for high-volume international orders.</p>
             </div>
-            
-<div class="flex flex-col gap-4 w-full h-full">
-    <div class="glass-card aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 group relative bg-[#050505]">
-        
-        <div id="carouselTrack" class="w-full h-full flex transition-transform duration-700 ease-in-out" style="transform: translateX(0%);">
-            <div class="w-full h-full flex-shrink-0 relative">
-                <img src="images/lab_1.webp" alt="Automated Filling Line" class="w-full h-full object-cover">
-                <div class="absolute bottom-4 left-6 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 text-[10px] tracking-widest text-cyan-400 font-mono"></div>
+            <div class="glass-card p-8 rounded-3xl border border-white/5 bg-white/[0.02]">
+                <div class="text-cyan-400 font-bold text-4xl mb-3">CLASS 10,000</div>
+                <div class="text-xs text-neutral-400 font-bold tracking-[0.2em] mb-4">[ CLEANROOM_STANDARD ]</div>
+                <p class="text-sm md:text-base text-neutral-300 leading-relaxed">Fully certified pharmaceutical-grade cleanroom environment to guarantee absolute sterility and purity during blending.</p>
             </div>
-            <div class="w-full h-full flex-shrink-0 relative">
-                <img src="images/lab_2.webp" alt="Blending Center" class="w-full h-full object-cover">
-                <div class="absolute bottom-4 left-6 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 text-[10px] tracking-widest text-cyan-400 font-mono"></div>
-            </div>
-            <div class="w-full h-full flex-shrink-0 relative">
-                <img src="images/lab_3.webp" alt="GC-MS Testing Lab" class="w-full h-full object-cover">
-                <div class="absolute bottom-4 left-6 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 text-[10px] tracking-widest text-cyan-400 font-mono"></div>
-            </div>
-            <div class="w-full h-full flex-shrink-0 relative">
-                <img src="images/lab_4.webp" alt="Smart Storage" class="w-full h-full object-cover">
-                <div class="absolute bottom-4 left-6 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 text-[10px] tracking-widest text-cyan-400 font-mono"></div>
+            <div class="glass-card p-8 rounded-3xl border border-white/5 bg-white/[0.02]">
+                <div class="text-cyan-400 font-bold text-4xl mb-3">GC-MS TECH</div>
+                <div class="text-xs text-neutral-400 font-bold tracking-[0.2em] mb-4">[ LABORATORY_TESTING ]</div>
+                <p class="text-sm md:text-base text-neutral-300 leading-relaxed">Rigorous molecular-level purity and composition analysis on every single batch via Gas Chromatography-Mass Spectrometry.</p>
             </div>
         </div>
-
-        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-40 pointer-events-none"></div>
-
-        <button id="prevBtn" type="button" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 border border-white/10 text-white flex items-center justify-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-cyan-950/50 hover:border-cyan-500 hover:text-cyan-400 z-10">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
-        </button>
-
-        <button id="nextBtn" type="button" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 border border-white/10 text-white flex items-center justify-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-cyan-950/50 hover:border-cyan-500 hover:text-cyan-400 z-10">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
-        </button>
-    </div>
-
-    <div class="flex justify-center items-center gap-3 mt-1">
-        <span class="dot w-8 h-1.5 rounded-full bg-cyan-500 transition-all duration-300 cursor-pointer" onclick="goToSlide(0)"></span>
-        <span class="dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300 cursor-pointer hover:bg-white/40" onclick="goToSlide(1)"></span>
-        <span class="dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300 cursor-pointer hover:bg-white/40" onclick="goToSlide(2)"></span>
-        <span class="dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300 cursor-pointer hover:bg-white/40" onclick="goToSlide(3)"></span>
-    </div>
-</div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 text-neutral-300 text-base md:text-lg leading-relaxed">
+                <p>Next‑Generation E‑Juice Factory operates a state-of-the-art facility dedicated to the molecular precision of flavor synthesis. Our lab is designed for compliance with European and Middle Eastern regulatory frameworks, ensuring consistent purity and safety across all manufacturing batches.</p>
+                <p>We provide a comprehensive E-liquid manufacturing solution: from the initial concept and custom flavor profiling to full-scale OEM production and private label branding. We leverage advanced laboratory equipment and ISO-compliant processes to deliver competitive products in rapidly evolving markets.</p>
+                <div class="flex flex-wrap gap-4 text-xs tracking-wider font-bold">
+                    <span class="px-5 py-2.5 border border-white/10 bg-white/5 text-neutral-300 rounded-full cursor-pointer transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400/50 hover:bg-cyan-950/30 hover:scale-105">[ OEM_SUPPORT ]</span>
+                    <span class="px-5 py-2.5 border border-white/10 bg-white/5 text-neutral-300 rounded-full cursor-pointer transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400/50 hover:bg-cyan-950/30 hover:scale-105">[ PRIVATE_LABEL ]</span>
+                    <span class="px-5 py-2.5 border border-white/10 bg-white/5 text-neutral-300 rounded-full cursor-pointer transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400/50 hover:bg-cyan-950/30 hover:scale-105">[ CUSTOM_DEVELOPMENT ]</span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 w-full h-full">
+                <div class="glass-card aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 group relative bg-[#050505]">
+                    <div id="carouselTrack" class="w-full h-full flex transition-transform duration-700 ease-in-out">
+                        <div class="w-full h-full flex-shrink-0 relative"><img src="images/lab_1.webp" alt="Automated Filling Line" class="w-full h-full object-cover"></div>
+                        <div class="w-full h-full flex-shrink-0 relative"><img src="images/lab_2.webp" alt="Blending Center" class="w-full h-full object-cover"></div>
+                        <div class="w-full h-full flex-shrink-0 relative"><img src="images/lab_3.webp" alt="GC-MS Testing Lab" class="w-full h-full object-cover"></div>
+                        <div class="w-full h-full flex-shrink-0 relative"><img src="images/lab_4.webp" alt="Smart Storage" class="w-full h-full object-cover"></div>
+                    </div>
+                    <button id="prevBtn" type="button" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 border border-white/10 text-white flex items-center justify-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-cyan-950/50 hover:text-cyan-400 z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                    </button>
+                    <button id="nextBtn" type="button" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 border border-white/10 text-white flex items-center justify-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-cyan-950/50 hover:text-cyan-400 z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                    </button>
+                </div>
+                <div class="flex justify-center items-center gap-3 mt-1">
+                    <span class="dot w-8 h-1.5 rounded-full bg-cyan-500 cursor-pointer" onclick="goToSlide(0)"></span>
+                    <span class="dot w-2 h-2 rounded-full bg-white/20 cursor-pointer" onclick="goToSlide(1)"></span>
+                    <span class="dot w-2 h-2 rounded-full bg-white/20 cursor-pointer" onclick="goToSlide(2)"></span>
+                    <span class="dot w-2 h-2 rounded-full bg-white/20 cursor-pointer" onclick="goToSlide(3)"></span>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="products" class="py-32 px-6 max-w-7xl mx-auto border-t border-white/5">
-        <h2 class="text-4xl md:text-5xl font-bold mb-20 flex items-center gap-6 justify-center md:justify-start">
-            <span class="w-16 h-1 tech-gradient rounded-full hidden md:block"></span>
-            ACTIVE_FLAVOR_MATRIX
-        </h2>
-
+        <h2 class="text-4xl md:text-5xl font-bold mb-20 flex items-center gap-6 justify-center md:justify-start"><span class="w-16 h-1 tech-gradient rounded-full hidden md:block"></span>ACTIVE_FLAVOR_MATRIX</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            
             <div class="glass-card rounded-2xl p-6 product-hover-glow relative group">
                 <div class="absolute top-6 right-6 text-xs text-cyan-400 font-semibold tracking-wider">MINT_LAB</div>
-               <div class="aspect-[4/5] bg-neutral-900 rounded-lg mb-8 flex items-center justify-center p-4 overflow-hidden">
-    <img src="images/mint_bottle.webp" alt="Extreme Mint Flavor" class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105">
-</div>
+                <div class="aspect-[4/5] bg-neutral-900 rounded-lg mb-8 flex items-center justify-center p-4 overflow-hidden">
+                    <img src="images/mint_bottle.webp" alt="Extreme Mint Flavor" class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                </div>
                 <h3 class="text-3xl font-bold mb-3 italic tracking-tight">Extreme Mint Flavor</h3>
-                <p class="text-sm text-neutral-500 mb-8 leading-relaxed">Liquid Nitrogen Cryo-extraction process. Severe throat hit, pure menthol base with high-purity finish. Ideal for refreshing and intense experiences.</p>
-                
-                <button onclick="window.open('https://wa.me/8618124528382')" class="w-full py-4 rounded-xl tech-gradient text-black font-bold text-sm flex items-center justify-center gap-3 group-hover:scale-[1.03] transition-all duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-                    ENQUIRE VIA WHATSAPP
+                <p class="text-sm md:text-base text-neutral-400 mb-8 leading-relaxed">Liquid Nitrogen Cryo-extraction process. Severe throat hit, pure menthol base with high-purity finish. Ideal for refreshing and intense experiences.</p>
+                <button onclick="window.open('https://wa.me/8618124528382')" class="w-full py-4 rounded-xl tech-gradient text-black font-bold text-xs tracking-widest flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                    [ REQUEST FREE SAMPLES VIA WHATSAPP ]
                 </button>
             </div>
-
             <div class="glass-card rounded-2xl p-6 product-hover-glow relative group">
                 <div class="absolute top-6 right-6 text-xs text-cyan-400 font-semibold tracking-wider">TOBACCO_LAB</div>
-               <div class="aspect-[4/5] bg-neutral-900 rounded-lg mb-8 flex items-center justify-center p-4 overflow-hidden">
-    <img src="images/tobacco_bottle.webp" alt="Classic Tobacco Storm" class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105">
-</div>
+                <div class="aspect-[4/5] bg-neutral-900 rounded-lg mb-8 flex items-center justify-center p-4 overflow-hidden">
+                    <img src="images/tobacco_bottle.webp" alt="Classic Tobacco Storm" class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                </div>
                 <h3 class="text-3xl font-bold mb-3 italic tracking-tight">Classic Tobacco Storm</h3>
-                <p class="text-sm text-neutral-500 mb-8 leading-relaxed">A digital reconstruction of classical tobacco profiles. Structured wood notes with subtle sweetness. Engineered for deep, full-bodied satisfaction.</p>
-                
-                <button onclick="window.open('https://wa.me/8618124528382')" class="w-full py-4 rounded-xl tech-gradient text-black font-bold text-sm flex items-center justify-center gap-3">
-                    ENQUIRE VIA WHATSAPP
+                <p class="text-sm md:text-base text-neutral-400 mb-8 leading-relaxed">A digital reconstruction of classical tobacco profiles. Structured wood notes with subtle sweetness. Engineered for deep, full-bodied satisfaction.</p>
+                <button onclick="window.open('https://wa.me/8618124528382')" class="w-full py-4 rounded-xl tech-gradient text-black font-bold text-xs tracking-widest flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                    [ REQUEST FREE SAMPLES VIA WHATSAPP ]
                 </button>
             </div>
-
             <div class="glass-card rounded-2xl p-6 product-hover-glow relative group">
                 <div class="absolute top-6 right-6 text-xs text-cyan-400 font-semibold tracking-wider">FRUIT_LAB</div>
-               <div class="aspect-[4/5] bg-neutral-900 rounded-lg mb-8 flex items-center justify-center p-4 overflow-hidden">
-    <img src="images/fruit_bottle.webp" alt="Realistic Fruit Blending" class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105">
-</div>
+                <div class="aspect-[4/5] bg-neutral-900 rounded-lg mb-8 flex items-center justify-center p-4 overflow-hidden">
+                    <img src="images/fruit_bottle.webp" alt="Realistic Fruit Blending" class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                </div>
                 <h3 class="text-3xl font-bold mb-3 italic tracking-tight">Realistic Fruit Blending</h3>
-                <p class="text-sm text-neutral-500 mb-8 leading-relaxed">Realistic recreation of classic fruit flavors, Ultimate presentation of classic flavors, innovation creates extraordinary taste experience.</p>
-                
-                <button onclick="window.open('https://wa.me/8618124528382')" class="w-full py-4 rounded-xl tech-gradient text-black font-bold text-sm flex items-center justify-center gap-3">
-                    ENQUIRE VIA WHATSAPP
+                <p class="text-sm md:text-base text-neutral-400 mb-8 leading-relaxed">Realistic recreation of classic fruit flavors, Ultimate presentation of classic flavors, innovation creates extraordinary taste experience.</p>
+                <button onclick="window.open('https://wa.me/8618124528382')" class="w-full py-4 rounded-xl tech-gradient text-black font-bold text-xs tracking-widest flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                    [ REQUEST FREE SAMPLES VIA WHATSAPP ]
                 </button>
             </div>
-            <script>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-32 px-6 max-w-7xl mx-auto border-t border-white/5">
+        <h2 class="text-4xl md:text-5xl font-bold mb-16 flex items-center gap-6 justify-center md:justify-start"><span class="w-16 h-1 tech-gradient rounded-full hidden md:block"></span>GLOBAL_COMPLIANCE_STANDARDS</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="glass-card p-8 rounded-2xl border border-white/5 transition-all duration-300 hover:border-cyan-500/30 group">
+                <div class="text-4xl font-extrabold text-cyan-400 mb-2 group-hover:scale-105 transition-transform">TPD</div>
+                <div class="text-xs tracking-[0.2em] text-neutral-400 font-bold uppercase mb-3">[ EU_COMPLIANT ]</div>
+                <p class="text-sm text-neutral-300 leading-relaxed">Fully tested and registered for the European Tobacco Products Directive markets.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl border border-white/5 transition-all duration-300 hover:border-cyan-500/30 group">
+                <div class="text-4xl font-extrabold text-cyan-400 mb-2 group-hover:scale-105 transition-transform">PMTA</div>
+                <div class="text-xs tracking-[0.2em] text-neutral-400 font-bold uppercase mb-3">[ FDA_REGISTERED ]</div>
+                <p class="text-sm text-neutral-300 leading-relaxed">Manufacturing workflows strictly mapped to US PMTA trace standards.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl border border-white/5 transition-all duration-300 hover:border-cyan-500/30 group">
+                <div class="text-4xl font-extrabold text-cyan-400 mb-2 group-hover:scale-105 transition-transform">CE / ROHS</div>
+                <div class="text-xs tracking-[0.2em] text-neutral-400 font-bold uppercase mb-3">[ CERTIFIED_LAB ]</div>
+                <p class="text-sm text-neutral-300 leading-relaxed">Heavy metal testing and chemical safety standards approved.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl border border-white/5 transition-all duration-300 hover:border-cyan-500/30 group">
+                <div class="text-4xl font-extrabold text-cyan-400 mb-2 group-hover:scale-105 transition-transform">ISO 9001</div>
+                <div class="text-xs tracking-[0.2em] text-neutral-400 font-bold uppercase mb-3">[ QUALITY_MGMT ]</div>
+                <p class="text-sm text-neutral-300 leading-relaxed">Standardized pharmaceutical-grade management system tracking every batch.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-32 px-6 max-w-4xl mx-auto border-t border-white/5">
+        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center italic tracking-tight text-cyan-400">[ FREQUENTLY_ASKED_QUESTIONS ]</h2>
+        <div class="space-y-4">
+            <div class="glass-card rounded-2xl border border-white/5 overflow-hidden transition-all duration-300">
+                <button onclick="toggleFaq(1)" class="w-full p-6 text-left flex justify-between items-center text-cyan-400 hover:bg-white/[0.01]">
+                    <span class="font-bold tracking-wide text-base md:text-lg">01. What is your Minimum Order Quantity (MOQ) for Private Label?</span>
+                    <span id="faq-icon-1" class="text-xl transition-transform duration-300">+</span>
+                </button>
+                <div id="faq-ans-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <p class="p-6 text-base text-neutral-300 leading-relaxed border-t border-white/5">Our standard MOQ for private label/OEM e-liquids starts at 3,000 bottles per flavor/nicotine strength. For large-scale custom formulation or regional distributors, MOQs can be negotiated based on production line scheduling.</p>
+                </div>
+            </div>
+            <div class="glass-card rounded-2xl border border-white/5 overflow-hidden transition-all duration-300">
+                <button onclick="toggleFaq(2)" class="w-full p-6 text-left flex justify-between items-center text-cyan-400 hover:bg-white/[0.01]">
+                    <span class="font-bold tracking-wide text-base md:text-lg">02. Can your laboratory match or replicate a specific flavor profile?</span>
+                    <span id="faq-icon-2" class="text-xl transition-transform duration-300">+</span>
+                </button>
+                <div id="faq-ans-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <p class="p-6 text-base text-neutral-300 leading-relaxed border-t border-white/5">Yes. Utilizing our advanced GC-MS (Gas Chromatography-Mass Spectrometry) molecular analysis equipment, our master flavorists can reverse-engineer and precise-match any target profile you provide, with an average matching accuracy over 95%.</p>
+                </div>
+            </div>
+            <div class="glass-card rounded-2xl border border-white/5 overflow-hidden transition-all duration-300">
+                <button onclick="toggleFaq(3)" class="w-full p-6 text-left flex justify-between items-center text-cyan-400 hover:bg-white/[0.01]">
+                    <span class="font-bold tracking-wide text-base md:text-lg">03. Do you offer free samples for quality and flavor verification?</span>
+                    <span id="faq-icon-3" class="text-xl transition-transform duration-300">+</span>
+                </button>
+                <div id="faq-ans-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <p class="p-6 text-base text-neutral-300 leading-relaxed border-t border-white/5">Absolutely. We highly recommend testing our formulas before bulk manufacturing. Qualified corporate buyers can contact our engineers directly via WhatsApp to request a tailored sample kit free of charge (shipping rates apply depending on destination).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="age-gate" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#050505]/95 backdrop-blur-xl px-4" style="display: none;">
+        <div class="glass-card max-w-md w-full p-8 md:p-10 rounded-3xl border border-cyan-400/20 text-center shadow-[0_0_50px_rgba(0,242,255,0.1)]">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-cyan-950/50 border border-cyan-400/30 text-cyan-400 text-2xl font-bold mb-6 animate-pulse">18+</div>
+            <h2 class="text-2xl md:text-3xl font-bold italic tracking-wider text-cyan-400 mb-4 uppercase">[ ACCESS_RESTRICTED ]</h2>
+            <p class="text-sm md:text-base text-neutral-300 leading-relaxed tracking-wide mb-8">This website contains products and information related to electronic cigarettes and e-liquids. You must be <span class="text-cyan-400 font-bold">18 years of age or older</span> (or the legal smoking age in your jurisdiction) to view this matrix.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button id="age-gate-confirm" class="flex-1 py-3.5 rounded-xl tech-gradient text-black font-bold text-xs tracking-widest uppercase transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(0,242,255,0.4)]">I AM 18 OR OLDER</button>
+                <button id="age-gate-reject" class="flex-1 py-3.5 rounded-xl border border-white/10 bg-white/5 text-neutral-400 font-bold text-xs tracking-widest uppercase transition-all duration-300 hover:bg-red-950/20 hover:border-red-500/50 hover:text-red-400">I AM UNDER 18</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
         let carouselIndex = 0;
         const totalCarouselSlides = 4;
         const carouselTrack = document.getElementById('carouselTrack');
@@ -242,10 +260,9 @@
         let carouselTimer;
 
         function updateCarouselView() {
-            // 精准水平平移轨道
-            carouselTrack.style.transform = `translateX(-${carouselIndex * 100}%)`;
-            
-            // 实时变换下方小圆点的酷炫拉长高亮形态
+            if(carouselTrack) {
+                carouselTrack.style.transform = `translateX(-${carouselIndex * 100}%)`;
+            }
             carouselDots.forEach((dot, index) => {
                 if (index === carouselIndex) {
                     dot.className = "dot w-8 h-1.5 rounded-full bg-cyan-500 transition-all duration-300 cursor-pointer";
@@ -271,17 +288,15 @@
             resetCarouselTimer();
         }
 
-        // 绑定左右箭头点击
-        document.getElementById('nextBtn').addEventListener('click', () => {
+        document.getElementById('nextBtn')?.addEventListener('click', () => {
             nextCarouselSlide();
             resetCarouselTimer();
         });
-        document.getElementById('prevBtn').addEventListener('click', () => {
+        document.getElementById('prevBtn')?.addEventListener('click', () => {
             prevCarouselSlide();
             resetCarouselTimer();
         });
 
-        // 4秒自动无缝切换
         function startCarouselTimer() {
             carouselTimer = setInterval(nextCarouselSlide, 4000);
         }
@@ -291,7 +306,53 @@
             startCarouselTimer();
         }
 
-        // 页面初始化加载时立刻启动
         startCarouselTimer();
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if(menu) {
+                menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+            }
+        }
+        document.getElementById('menu-btn')?.addEventListener('click', toggleMenu);
+
+        function toggleFaq(id) {
+            const answer = document.getElementById(`faq-ans-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            if (answer && icon) {
+                if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+                    answer.style.maxHeight = '0px';
+                    icon.style.transform = 'rotate(0deg)';
+                    icon.innerText = '+';
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(45deg)';
+                    icon.innerText = '×';
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const ageGate = document.getElementById('age-gate');
+            const confirmBtn = document.getElementById('age-gate-confirm');
+            const rejectBtn = document.getElementById('age-gate-reject');
+
+            if (ageGate && !localStorage.getItem('cyber_age_verified')) {
+                ageGate.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; 
+            }
+
+            confirmBtn?.addEventListener('click', function() {
+                localStorage.setItem('cyber_age_verified', 'true');
+                if(ageGate) ageGate.style.display = 'none';
+                document.body.style.overflow = ''; 
+            });
+
+            rejectBtn?.addEventListener('click', function() {
+                alert("ACCESS DENIED: You do not meet the legal age requirement to view this lab.");
+                window.location.href = "https://www.google.com"; 
+            });
+        });
     </script>
 </body>
+</html>
